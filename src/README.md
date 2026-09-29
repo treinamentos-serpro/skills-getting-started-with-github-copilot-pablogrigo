@@ -12,7 +12,7 @@ Uma aplicação FastAPI bem simples que permite às pessoas estudantes visualiza
 1. Instale as dependências:
 
    ```
-   pip install fastapi uvicorn
+   pip install -r requirements.txt
    ```
 
 2. Execute a aplicação:
@@ -31,6 +31,15 @@ Uma aplicação FastAPI bem simples que permite às pessoas estudantes visualiza
 | ------ | ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Retorna todas as atividades com seus detalhes e o número atual de participantes |
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Inscreve em uma atividade                                              |
+| DELETE | `/activities/{activity_name}/signup?email=student@mergington.edu` | Cancela a inscrição de uma pessoa estudante                            |
+
+## Testes
+
+Na raiz do repositório, execute:
+
+```bash
+python -m pytest -q
+```
 
 ## Modelo de dados
 
